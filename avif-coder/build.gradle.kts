@@ -42,7 +42,7 @@ afterEvaluate {
             create<MavenPublication>("mavenJava") {
                 groupId = "com.github.awxkee"
                 artifactId = "avif-coder"
-                version = "2.0.0"
+                version = "2.0.1"
                 from(components["release"])
 //                artifact("androidSourcesJar")
             }
@@ -109,5 +109,5 @@ android {
     }
 }
 dependencies {
-    implementation("androidx.annotation:annotation-jvm:1.7.1")
+    implementation("androidx.annotation:annotation:1.2.0")
 }
