@@ -94,7 +94,7 @@ class MainActivity : AppCompatActivity() {
         // HDR EXAMPLES - https://us.zonerama.com/williamskeaguidingphotography/Photo/1000120226/1004888131
         lifecycleScope.launch(Dispatchers.IO) {
             val coder = HeifCoder()
-            val buffer = assets.open("screenshot_test.png").source().buffer().readByteArray()
+            val buffer = assets.open("test_2.jpg").source().buffer().readByteArray()
             val bitmap = BitmapFactory.decodeByteArray(buffer, 0, buffer.size)
             val encoded = coder.encodeAvif(bitmap, quality = 99, preciseMode = PreciseMode.LOSSLESS, speed = AvifSpeed.ONE)
             val decoded = coder.decode(encoded)
