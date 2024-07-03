@@ -25,6 +25,10 @@
 
 @file:Suppress("UnstableApiUsage")
 
+import com.android.tools.r8.internal.pw
+import java.net.URI
+
+
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
@@ -45,6 +49,15 @@ afterEvaluate {
                 version = "2.0.1"
                 from(components["release"])
 //                artifact("androidSourcesJar")
+            }
+        }
+        repositories{
+            maven{
+                url = URI("https://nexus.hss01248.tech/repository/maven-releases/")
+                credentials {
+                    username ="xx"
+                    password ="xx"
+                }
             }
         }
     }
